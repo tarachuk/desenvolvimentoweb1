@@ -10,7 +10,7 @@ const conexao = mysql.createConnection({
 //const titulo = "Jesus de Nazare";
 //const autor = "Joseph Aloisius Ratzinger";
 
-const insert = 'INSERT INTO livros (titulo, autor) VALUE (?, ?)';
+/*const insert = 'INSERT INTO livros (titulo, autor) VALUE (?, ?)';
 
 conexao.query(insert, [titulo, autor], function (erro) {
 
@@ -22,11 +22,24 @@ conexao.query(insert, [titulo, autor], function (erro) {
         console.log("Cadastro com sucesso");
     }
 
- //  conexao.end();
-});
+   conexao.end();
+});*/
 
 const id = 2
 
 const deletar = 'DELETE FROM livros WHERE id =?';
 
-conexao.query()
+conexao.query(deletar, [id], function (erro, resultado) {
+
+    if (erro) {
+        console.log("Erro ao excluir o produto.");
+        console.log(erro);
+    }
+    else if (resultado.affectedRows === 0) {
+        console.log("Livro não encontrado");
+    } else {
+        console.log("Livro excluido com sucesso!");
+    }
+
+    conexao.end();
+});

@@ -9,3 +9,10 @@ CREATE TABLE alunos(
     
     SELECT * FROM alunos;
     
+CREATE TABLE professores(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100)NOT NULL,
+    diciplina VARCHAR(100)NOT NULL
+);
+
+SELECT * FROM professores;

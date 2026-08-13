@@ -1,0 +1,10 @@
+CREATE DATABASE weg;
+USE weg;
+
+CREATE TABLE clientes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100)NOT NULL,
+    telefone VARCHAR(100)NOT NULL
+);
+
+SELECT * FROM clientes;
