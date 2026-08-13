@@ -1,0 +1,46 @@
+const mysql = require("mysql2");
+
+// Conexão com o MySQL
+const conexao = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "root",
+    database: "ecommerce"
+});
+
+//Produtos que seram cadastrados
+const nome= 'Mouse'
+const preco= '75'
+
+const insert = 'INSERT INTO produtos (nome, preco) VALUE (?, ?)';
+
+conexao.query(insert, [nome, preco], function(erro) {
+
+    if (erro) {
+        console.log("Erro ao cadastrar!");
+        console.log(erro);
+    }
+    else {
+        console.log("Produto cadastrado com sucesso!!");
+    }
+
+ //   conexao.end()
+});
+
+const id= 2;
+
+const deletar = 'DELETE FROM produtos WHERE id =?';
+
+conexao.query(deletar, [id], function(erro, resultado) {
+
+    if (erro) {
+        console.log("Erro ao excluir o produto.");
+        console.log(erro);
+    }else if (resultado.affectedRows ===0) {
+        console.log("Produto não encontrado!");
+    } else {
+        console.log("Produto exclúido com scesso!");
+    }
+
+    conexao.end();
+});
