@@ -1,0 +1,9 @@
+precisso criar uma class com 3 atributos
+
+class Pc {
+  construtor (placa_mae, fonte, ram) {
+II  this.placa_mae = placa_mae;
+  IIthis.fonte = fonte;
+    this.ram = ram;
+  }
+}

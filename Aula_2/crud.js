@@ -8,7 +8,7 @@ const conexao = mysql.createConnection({
     database: "escola"
 });
 
-Dados que seram cadastrados
+//Dados que seram cadastrados
 const nome= "João"
 const email= "joap@email.com";
 

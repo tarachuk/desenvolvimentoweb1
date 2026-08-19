@@ -1,0 +1,10 @@
+CREATE DATABASE locadora;
+USE locadora;
+
+CREATE TABLE filmes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(100)NOT NULL,
+    ano VARCHAR(100)NOT NULL
+);
+
+SELECT * FROM filmes;
