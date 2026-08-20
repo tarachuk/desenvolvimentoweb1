@@ -25,3 +25,4 @@ CREATE TABLE diciplinas(
 );
 
 SELECT * FROM diciplinas;
+
