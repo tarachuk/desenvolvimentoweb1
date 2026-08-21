@@ -15,6 +15,9 @@ function cadastrarAluno() {
     const nome = readline.question("Digite o nome do aluno: ");
     const email = readline.question("Digite o email do aluno: ");
     const endereco = readline.question("Digite o endereco do aluno: ");
+    const matricula = readline.question("Digite a matricula do aluno: ");
+    const curso = readline.question("Digite o curso do aluno: ");
+    const Serie = readline.question("Digite a serie do aluno: ");
 
     const insert = "INSERT INTO alunos (nome, email, endereco, matricula, curso, Serie) VALUES (?,?,?,?,?,?)";
 
@@ -30,7 +33,7 @@ function cadastrarAluno() {
         menu();
     });
 }
-//cadastrarAluno();
+
 
 //Função para excluir aluno
 function excluirAluno() {
@@ -69,7 +72,11 @@ function listarAlunos() {
                 console.log(
                     aluno.id +" - "+
                     aluno.nome +" - "+
-                    aluno.email
+                    aluno.email +" - "+
+                    aluno.endereco +" - "+
+                    aluno.matricula +" - "+
+                    aluno.curso +" - "+
+                    aluno.Serie
                 );
             });
         }
@@ -88,21 +95,21 @@ function menu() {
     console.log("3 - Listar alunos");
     console.log("0 - Sair");
 
-    const opcao = readline.question("Escolha uma opção: ");
+    const opcao = readline.questionInt("Escolha uma opção: ");
 
-    if (opcao == 1){
+    if (opcao === 1){
 
         cadastrarAluno();
 
-    } else if (opcao == 2) {
+    } else if (opcao === 2) {
 
         excluirAluno();
 
-    } else if (opcao == 3) {
+    } else if (opcao === 3) {
 
         listarAlunos();
 
-    } else if (opcao == 0) {
+    } else if (opcao === 0) {
 
         console.log("Programa encerrado.");
         conexao.end();
