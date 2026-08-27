@@ -80,7 +80,7 @@ function listarLivro() {
 
 function menu() {
 
-    console.log("\n===== BIBLIOTECA =====");
+    console.log("\n===== MENU =====");
     console.log("1 - Cadastrar livro");
     console.log("2 - Excluir livro");
     console.log("3 - Listar livros");

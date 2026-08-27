@@ -89,7 +89,7 @@ function listarAlunos() {
 
 function menu() {
 
-    console.log("\n===== Menu =====");
+    console.log("\n===== MENU =====");
     console.log("1 - Cadastrar aluno");
     console.log("2 - Excluir aluno");
     console.log("3 - Listar alunos");

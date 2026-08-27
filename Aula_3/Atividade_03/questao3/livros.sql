@@ -7,4 +7,4 @@ CREATE TABLE livros(
     autor VARCHAR(100) 
     );
 
-    SELECT * FROM livros;
+SELECT * FROM livros;
