@@ -14,7 +14,7 @@ function cadastrarJogos() {
     const nome = readline.question("Digite o nome do jogo: ");
     const genero = readline.question("Digite genero do jogo: ");
 
-    const insert = "INSERT INTO jogos (nome, genero) VELUES (?,?)";
+    const insert = "INSERT INTO jogos (nome, genero) VALUES (?,?)";
 
     conexao.query(insert, [nome, genero], function (erro) {
 
@@ -62,7 +62,7 @@ function listarJogos() {
             console.log("Erro ao listar os jogos.");
             console.log(erro);
         } else {
-            console("\n===== JOGOS =====");
+            console.log("\n===== JOGOS =====");
             jogos.forEach(function (jogos) {
                 console.log(
                     jogos.id +" - "+

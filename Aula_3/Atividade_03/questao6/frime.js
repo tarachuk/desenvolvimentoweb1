@@ -14,7 +14,7 @@ function cadastrarFilmes() {
     const titulo = readline.question("Digite o nome do filme: ");
     const ano = readline.question("Digite o telefone do filme: ");
 
-    const insert = "INSERT INTO filmes (titulo, ano) VELUES (?,?)";
+    const insert = "INSERT INTO filmes (titulo, ano) VALUES (?,?)";
 
     conexao.query(insert, [titulo, ano], function (erro) {
 

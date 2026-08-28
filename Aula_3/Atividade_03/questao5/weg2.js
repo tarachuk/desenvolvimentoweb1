@@ -14,7 +14,7 @@ function cadastrarCliente() {
     const nome = readline.question("Digite o nome do cliente: ");
     const telefone = readline.question("Digite o telefone do cliente: ");
 
-    const insert = "INSERT INTO clientes (nome, telefone) VELUES (?,?)";
+    const insert = "INSERT INTO clientes (nome, telefone) VALUES (?,?)";
 
     conexao.query(insert, [nome, telefone], function (erro) {
 
@@ -62,7 +62,7 @@ function listarCliente() {
             console.log("Erro ao listar os clientes.");
             console.log(erro);
         } else {
-            console("\n===== CLIENTES =====");
+            console.log("\n===== CLIENTES =====");
             clientes.forEach(function (clientes) {
                 console.log(
                     clientes.id +" - "+
