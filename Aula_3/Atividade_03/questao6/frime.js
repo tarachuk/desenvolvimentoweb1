@@ -12,14 +12,14 @@ const conexao = mysql.createConnection({
 function cadastrarFilmes() {
 
     const titulo = readline.question("Digite o nome do filme: ");
-    const ano = readline.question("Digite o telefone do filme: ");
+    const ano = readline.question("Digite o ano do filme: ");
 
     const insert = "INSERT INTO filmes (titulo, ano) VALUES (?,?)";
 
     conexao.query(insert, [titulo, ano], function (erro) {
 
         if (erro) {
-            console.log("Erro ao cadastra o filme!!");
+            console.log("Erro ao cadastrar o filme!!");
             console.log(erro);
         } else {
             console.log("Filme cadastrado com sucesso!!!!");
@@ -54,7 +54,8 @@ function excluirFilmes() {
 
 function listarFilmes() {
 
-    const sql = "SELECT * FROM filmes";
+    const sql = `SELECT * FROM filmes
+                ORDER BY titulo`;
 
     conexao.query(sql, function (erro, filmes) {
 
@@ -62,7 +63,7 @@ function listarFilmes() {
             console.log("Erro ao listar os filme.");
             console.log(erro);
         } else {
-            console("\n===== FILMES =====");
+            console.log("\n===== FILMES =====");
             filmes.forEach(function (filmes) {
                 console.log(
                     filmes.id +" - "+
