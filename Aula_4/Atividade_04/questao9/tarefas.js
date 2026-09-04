@@ -8,11 +8,10 @@ const conexao = mysql.createConnection({
     database: "deveres"
 });
 
-
 function cadastrarTarefas() {
 
     const descricao = readline.question("Digite a descrição da tarefa: ");
-    if (descricao ===null){
+    if (descricao ===""){
         const responsavel = readline.question("Digite nome do responsavel: ");
 
         const insert = "INSERT INTO tarefas (descricao, responsavel)VALUES (?,?)";
@@ -80,6 +79,32 @@ function listarTarefas() {
     });
 }
 
+function atualizarTarefas() {
+
+    const id = readline.question("Digite o ID do tarefa: ");
+    const descricao = readline.question("Digite o nome novo do tarefa: ");
+    const responsavel = readline.question("Digite o novo tarefa: ");
+
+    const update = `
+    UPDATE tarefas
+    SET descricao = ?, responsavel = ?
+    WHERE id = ?
+    `;
+    conexao.query(update, [descricao, responsavel, id], function (erro, resultado) {
+ 
+        if (erro) {
+            console.log("Erro ao atualizar o tarefas.");
+            console.log(erro);
+        } else if (resultado.affectedRows === 0) {
+            console.log("Tarefa não encontrado.");
+        } else {
+            console.log("Tarefa atualizado com sucesso!");
+        }
+
+        menu();
+    });
+}
+
 // Menu principal
 
 function menu() {
@@ -88,6 +113,7 @@ function menu() {
     console.log("1 - Cadastrar tarefas");
     console.log("2 - Excluir tarefas");
     console.log("3 - Listar tarefas");
+    console.log("4 - Atualizar tarefa");
     console.log("0 - Sair");
 
     const opcao = readline.questionInt("Escolha uma opção: ");
@@ -103,6 +129,10 @@ function menu() {
     } else if (opcao === 3) {
 
         listarTarefas();
+
+    } else if (opcao === 4) {
+
+        atualizarTarefas();
 
     } else if (opcao === 0) {
 

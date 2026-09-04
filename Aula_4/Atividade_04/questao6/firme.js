@@ -77,6 +77,32 @@ function listarFilmes() {
     });
 }
 
+function atualizarFilmes() {
+
+    const id = readline.question("Digite o ID do filme: ");
+    const titulo = readline.question("Digite o nome novo do filme: ");
+    const ano = readline.question("Digite o novo ano do filme: ");
+
+    const update = `
+    UPDATE filmes
+    SET titulo = ?, ano = ?
+    WHERE id = ?
+    `;
+    conexao.query(update, [titulo, ano, id], function (erro, resultado) {
+ 
+        if (erro) {
+            console.log("Erro ao atualizar o filme.");
+            console.log(erro);
+        } else if (resultado.affectedRows === 0) {
+            console.log("Filme não encontrado.");
+        } else {
+            console.log("Filme atualizado com sucesso!");
+        }
+
+        menu();
+    });
+}
+
 // Menu principal
 
 function menu() {
@@ -85,6 +111,7 @@ function menu() {
     console.log("1 - Cadastrar filmes");
     console.log("2 - Excluir filmes");
     console.log("3 - Listar filmes");
+    console.log("4 - Atualizar filme");
     console.log("0 - Sair");
 
     const opcao = readline.questionInt("Escolha uma opção: ");
@@ -101,6 +128,10 @@ function menu() {
 
         listarFilmes();
 
+    } else if (opcao === 4) {
+
+        atualizarFilmes();
+        
     } else if (opcao === 0) {
 
         console.log("Programa encerrado.");
