@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição do cursos</title>
+</head>
+<body>
+    <form method="post" action="" onsubmit="alert('Inscrição enviada com sucesso!')">
+
+        <h2>Inscrição do cursos</h2>
+        <p>Insira os dados abaixo para inscrição</p>
+
+        <label>Insira o nome completo:</label> <br>
+        <input type="text" name="login" placeholder="Insira o nome completo" required>
+        <br> <br>
+        <label>Insira o email:</label><br>
+        <input type="text" name="email" placeholder="Insira o email" required>
+        <br> <br>
+        <label>Insira a senha:</label><br>
+        <input type="password" name="pwd" placeholder="Insira a senha" required>
+        <br> <br>
+
+        <label>Data de nascimeno:</label><br>
+        <input type="date" name="nascimeno">
+        <br> <br>
+
+        <p>Curso desejado:</p>
+        <input type="radio"
+               id="desenvolvimento"
+               name="curso"
+               value="desenvolvimento"
+               required>
+        <label for="desenvolvimento">Desenvolvimento de sistemas</label>
+        <br>
+        <input type="radio"
+               id="adm"
+               name="curso"
+               value="adm"
+               required>
+        <label for="adm">Adimistração</label>
+        <br>
+        <input type="radio"
+               id="rh"
+               name="curso"
+               value="rh"
+               required>
+        <label for="rh">Recursos humanos</label>
+        <br>
+        <input type="radio"
+               id="cd"
+               name="curso"
+               value="cd"
+               required>
+        <label for="cd">Ciência de dados</label>
+        <br> <br>
+
+        <p>Turno:</p>
+        <input type="radio"
+               id="matutino"
+               name="turno"
+               value="matutino"
+               required>
+        <label for="matutino">Matutino</label>
+        <br>
+        <input type="radio"
+               id="verpetino"
+               name="turno"
+               value="verpetino"
+               required>
+        <label for="verpetino">Verpetino</label>
+        <br><input type="radio"
+               id="noturno"
+               name="turno"
+               value="noturno"
+               required>
+        <label for="noturno">Noturno</label>
+        <br> <br>
+
+        <input type="submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de Atendimento em Restalrante</title>
+</head>
+<body>
+    <form method="post" action="" onsubmit="alert('Obrigado por avaliar nosso atendimento!')">
+
+    <h2>Avaliação de atendimento</h2>
+    <p>Deixe sua opnião sobre o nosso atendimento:</p>
+
+    <label>Insira o seu nome:</label> <br>
+    <input type="text" name="cliente" placeholder="Insira seu nome" >
+    <br> <br>
+    <label>Data e horário da visita</label><br>
+    <input type="date" name="date"><br>
+    <input type="time" name="hora">
+    <br> <br>
+
+    <p>Tipo de atendimento:</p>
+        <input type="radio"
+               id="presencial"
+               name="atendimento"
+               value="presencial"
+               >
+        <label for="presencial">Presencial</label>
+        <br>
+        <input type="radio"
+               id="retirada"
+               name="atendimento"
+               value="retirada"
+               >
+        <label for="retirada">Retirada no local</label>
+        <br>
+        <input type="radio"
+               id="entrega"
+               name="atendimento"
+               value="entrega"
+               >
+        <label for="entrega">entrega</label>
+        <br> <br>
+
+        <p>Itens consumidos:</p>
+        <input type="checkbox"
+               id="bebidas"
+               name="itens"
+               value="bebidas"
+               >
+        <label for="bebidas">Bebidas</label>
+        <br>
+        <input type="checkbox"
+               id="lanches"
+               name="itens"
+               value="lanches"
+               >
+        <label for="lanches">Lanches</label>
+        <br>
+        <input type="checkbox"
+               id="pratos"
+               name="itens"
+               value="pratos"
+               >
+        <label for="pratos">Pratos</label>
+        <br>
+        <input type="checkbox"
+               id="sobremesas"
+               name="itens"
+               value="sobremesas"
+                >
+        <label for="sobremesas">Sobremesas</label>
+        <br> <br>
+
+        <label for="sat">Nivel de satisfação com o restalrante:</label>
+        <input type="range" id="sat" name="sat" min="0" max="10">
+        <br> <br>
+
+        <label>Comentários sobre o atendimento:</label><br>
+        <input type="textarea" name="comentario">
+        <br> <br>
+
+        <label>Quantas pessoas estavam na sua mesa:</label>
+        <input type="number" name="numero" min="1" max="20">
+        <br> <br>
+
+        <label>Enviar avaliação</label><br>
+        <input type="submit">
+
+    </form>
+</body>
+</html>

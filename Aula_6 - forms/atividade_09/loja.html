@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Virtual</title>
+</head>
+<body>
+    
+    <form method="post" action="" onsubmit="alert('Cadastro realizado com sucesso!')">
+        <br> <br>
+
+        <h2>Novo cadastro</h2>
+        <p>Insira os dados para o cadastro</p>
+
+        <label>Insira o nome completo:</label> <br>
+        <input type="text" name="login" placeholder="Insira o nome completo" required>
+        <br> <br>
+        <label>Insira o email:</label><br>
+        <input type="text" name="email" placeholder="Insira o email" required>
+        <br> <br>
+        <label>Insira a senha:</label><br>
+        <input type="password" name="pwd" placeholder="Insira a senha" required>
+        <br> <br>
+        
+
+        <p>Insira a data de nascimeno?</p>
+        <input type="date" name="nascimeno">
+        <br> <br>
+
+        <p>Qual o seu sexo?</p>
+        <input type="radio"
+               id="feminino"
+               name="sexo"
+               value="feminino">
+        <label for="feminino">Feminino</label>
+        <br>
+        <input type="radio"
+               id="masculino"
+               name="sexo"
+               value="masculino">
+        <label for="masculino">Masculino</label>
+        <br>
+        <input type="radio"
+               id="prefiro nao informar"
+               name="sexo"
+               value="prefiro nao informar">
+        <label for="prefiro nao informar">Prefiro não informar</label>
+        <br> <br>
+
+        <p>Qual a sua cor preferida?</p>
+        <input type="color" name="color">
+        <br> <br>
+
+        <p>Comentario ou obeservação sobre o cadastro:</p> <br>
+        <input type="text" name="comentario" placeholder="Obeservação">
+        <br> <br>
+
+        <p>Insira uma foto de perfil</p>
+        <input type="file" name="foto">
+        <br> <br>
+
+        <input type="submit">
+
+    </form>
+</body>
+</html>

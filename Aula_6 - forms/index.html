@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários HTML</title>
+</head>
+<body>
+    <form method="post" action="" onsubmit="alert('Bem-vindo ao sistema')">
+        <br> <br>
+        <h2> Bem-vindo ao sistema! </h2>
+        <p>Insira seus dados para logar</p>
+
+        <label>Insira seu nome de usuário:</label><br>
+        <input type="text" name="login" placeholder="Insira seu nome" required> <br> <br>
+
+        <label>Insira sua senha:</label><br>
+        <input type="password" name="pwd" placeholder="Insira sua senha" required> <br> <br>
+
+        <label>Insira seu email de usuário:</label><br>
+        <input type="email" name="email" placeholder="Insira seu email" required> <br> <br>
+
+        <p>Qual o seu meio de transporte?</p>
+        <input type="checkbox" name="veiculo1" value="bike">
+        Eu tenho uma bike<br>
+        <input type="checkbox" name="veiculo2" value="carro">
+        Eu tenho um carro<br>
+        <input type="checkbox" name="veiculo3" value="moto">
+        Eu tenho uma moto <br> <br>
+
+        <p>Qual é o seu sexo?</p>
+        <input type="radio"
+               id="feminino"
+               name="sexo"
+               value="feminino"
+               required>
+        <label for="feminino">Feminino</label>
+        <br>
+        <input type="radio"
+               id="masculino"
+               name="sexo"
+               value="masculino"
+               required>
+        <label for="masculino">Masculino</label>
+        <br>
+        <input type="radio"
+               id="nao definido"
+               name="sexo"
+               value="nao definido"
+               required>
+        <label for="nao definido">Não definido</label>
+        <br> <br>
+
+        <p>Data de nascimento:</p>
+        <input type="date" name="nascimento">
+        <br> <br>
+
+        
+        <input type="submit">
+
+
+    </form>
+
+
+</body>
+</html>

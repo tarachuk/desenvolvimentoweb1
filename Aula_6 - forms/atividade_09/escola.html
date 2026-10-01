@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entregar atividade escolar</title>
+</head>
+<body>
+    <form method="post" action="" onsubmit="alert('Atividade enviada com sucesso!')">
+
+        <h2>Entrega de atividade</h2>
+
+        <label>Insira o seu nome:</label><br> 
+        <input type="text" name="nome" placeholder="Insira seu nome" required>
+        <br> <br>
+        <label>Insira o email</label><br>
+        <input type="text" name="email" placeholder="Insira o seu email"required>
+        <br> <br>
+        <label>Data de entrega</label><br>
+        <input type="date" name="entrega">
+        <br> <br>
+
+        <label>Disiplina</label><br>
+        <input type="radio"
+               id="bd"
+               name="disiplina"
+               value="bd"
+               required>
+        <label for="bd">Banco de dados</label>
+        <br>
+        <input type="radio"
+               id="programacao"
+               name="disiplina"
+               value="programacao"
+               required>
+        <label for="programacao">Programação</label>
+        <br>
+        <input type="radio"
+               id="desenvolvimento"
+               name="disiplina"
+               value="desenvolvimento"
+               required>
+        <label for="desenvolvimento">Desenvolvimento web</label>
+        <br>
+        <input type="radio"
+               id="analise"
+               name="disiplina"
+               value="analise"
+               required>
+        <label for="analise">Análise de dados</label>
+        <br> <br>
+
+        <p>Tipo de atividade:</p>
+        <input type="radio"
+               id="trabalho_ind"
+               name="tipo"
+               value="trabalho_ind"
+               required>
+        <label for="trabalho_ind">Trabalho individual</label>
+        <br>
+        <input type="radio"
+               id="equipe"
+               name="tipo"
+               value="equipe"
+               required>
+        <label for="equipe">Trabalho em equipe</label>
+        <br>
+        <input type="radio"
+               id="recuperacao"
+               name="tipo"
+               value="recuperacao"
+               required>
+        <label for="recuperacao">Recuperação</label>
+        <br>
+        <input type="radio"
+               id="projeto"
+               name="tipo"
+               value="projeto"
+               required>
+        <label for="projeto">Projeto</label>
+        <br> <br>
+
+        <label>Arquivos da atividade:</label><br>
+        <input type="file" name="arquivos" required multiple>
+        <br> <br>
+
+        <label for="dif">Nivel de dificuldade da atividade, de 0 a 10:</label>
+        <input type="range" id="dif" name="dif" min="0" max="10">
+        <br> <br>
+
+        <label>Comentário para o professor</label><br>
+        <input type="textarea" name="comentario">
+        <br> <br>
+
+        <input type="radio"
+               id="confirmacao"
+               name="add"
+               value="confirmacao"
+               required>
+        <label for="confirmacao">Confirmo que os arquivos enviados são de minha autoria</label>
+        <br> <br>
+
+        <label>Enviar atividade</label><br>
+        <input type="submit">
+
+    </form>
+</body>
+</html>
