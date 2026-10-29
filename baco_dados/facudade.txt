@@ -1,0 +1,14 @@
+
+DEPARTAMENTOS
+
+DICIPLINAS
+
+PESSOAS
+
+PROFESSORES
+
+ALUNOS
+
+-id_aluno:
+-nome:String
+-idade:String
